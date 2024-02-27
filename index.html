@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<!-- Author: Shorouk Abdelaziz  https://shorouk.dev -->
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Socials</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: grid;
+      font-family: "Poppins", sans-serif;
+      place-items: center;
+    }
+
+    .wrapper {
+      padding-top: 10px;
+      display: flex;
+      justify-content: center; /* Center icons */
+      gap: 20px; /* Add gap between icons */
+    }
+
+    .icon {
+      /* Set uniform icon size */
+      width: 50px;
+      height: 50px;
+      /* Icon color */
+      color: #7a7a7a; /* Default gray color */
+      /* Transition for smooth hover effect */
+      transition: all 0.3s ease;
+      /* Center icon */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Enlarge icon and change color on hover */
+    .social:hover .icon {
+      color: #000; /* Change color on hover */
+      transform: scale(1.2); /* Enlarge on hover */
+    }
+
+    /* Show icon name on hover */
+    .social:hover .icon-name {
+      opacity: 1;
+    }
+
+    .icon-name {
+      position: absolute;
+      bottom: -30px; /* Adjusted distance from icon */
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.8em;
+      color: #000;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      text-align: center; /* Center icon name */
+    }
+
+    .social {
+      position: relative;
+      cursor: pointer;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="wrapper">
+
+    <!-- Start CvSU Portal Icon -->
+    <div id="cvsulogo" onclick="navigate('https://trece.cvsu.edu.ph/student/dashboard')" class="social cvsu">
+      <span class="icon cvsu"><img src="https://upload.wikimedia.org/wikipedia/en/d/d2/Cavite_State_University_%28CvSU%29.png" alt="CvSU Logo" width="50"></span>
+      <span class="icon-name">CvSU Portal</span>
+    </div>
+    <!-- End CvSU Portal Icon -->
+
+    <!-- Start Gmail Icon -->
+    <div id="gmail" onclick="navigate('https://mail.google.com/')" class="social">
+      <span class="icon gmail"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/640px-Gmail_icon_%282020%29.svg.png" alt="Gmail Logo" width="50"></span>
+      <span class="icon-name">Gmail</span>
+    </div>
+    <!-- End Gmail Icon -->
+
+    <!-- Start Google Meet Icon -->
+    <div id="googlemeet" onclick="navigate('https://meet.google.com/')" class="social">
+      <span class="icon googlemeet"><img src="https://www.brandeis.edu/its/_files/google-meet-logo.png" alt="Google Meet" width="50"></span>
+      <span class="icon-name">Google Meet</span>
+    </div>
+    <!-- End Google Meet Icon -->
+
+    <!-- Start Google Docs Icon -->
+    <div id="googledocs" onclick="navigate('https://docs.google.com/document/u/0/?tgif=d')" class="social">
+      <span class="icon googledocs"><img src="https://1000logos.net/wp-content/uploads/2023/01/Google-Docs-logo.png" alt="Google Docs" width="50"></span>
+      <span class="icon-name">Google Docs</span>
+    </div>
+    <!-- End Google Docs Icon -->
+
+    <!-- Start Google Classroom Icon -->
+    <div id="googleclassroom" onclick="navigate('https://classroom.google.com/h')" class="social">
+      <span class="icon googleclassroom"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrlUZ6GYyTg4LfoSUINECEBoFMZl_YhrRu0Xq0uyEXLIKg5EHpPfu4wo7zxh3IF3-TRu8&usqp=CAU" alt="Google Classroom" width="50"></span>
+      <span class="icon-name">Google Classroom</span>
+    </div>
+    <!-- End Google Classroom Icon -->
+
+    <!-- Start Psych Books (Google Play) Icon -->
+    <div id="googleplay" onclick="openApplication('google-play')" class="social">
+      <span class="icon googleplay"><img src="https://play-lh.googleusercontent.com/t-juVwXA8lDAk8uQ2L6d6K83jpgQoqmK1icB_l9yvhIAQ2QT_1XbRwg5IpY08906qEw" alt="Google Play" width="50"></span>
+      <span class="icon-name">Psych Books</span>
+    </div>
+    <!-- End Psych Books (Google Play) Icon -->
+
+    <!-- Start JP Buduan (YouTube) Icon -->
+    <div id="jp-buduan" onclick="navigate('https://www.youtube.com/c/JPBuduan')" class="social">
+      <span class="icon jp-buduan"><img src="https://img.freepik.com/premium-photo/youtube-logo-video-player-3d-design-video-media-player-interface_41204-12379.jpg" alt="JP Buduan YouTube" width="50"></span>
+      <span class="icon-name">JP Buduan</span>
+    </div>
+    <!-- End JP Buduan (YouTube) Icon -->
+
+  </div>
+
+  <script>
+    function navigate(url) {
+      window.open(url, '_blank').focus();
+    }
+
+    function openApplication(app) {
+      if (app === 'google-play') {
+        window.open('https://play.google.com/store/apps/details?id=com.google.android.apps.docs&hl=en&gl=US', '_blank').focus();
+      }
+    }
+  </script>
+
+</body>
+
+</html>
